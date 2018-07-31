@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".home_activity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include  layout="@layout/activity_maps_layout"/>
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/main"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="1">
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating_main"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="@dimen/floating_margin"
+        android:layout_marginRight="@dimen/floating_margin"
+        android:src="@drawable/add"
+        android:elevation="20dp"
+        app:pressedTranslationZ="20dp"
+        android:backgroundTint="@color/main_floating"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/login_linear"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/user_textview"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="User"
+            android:textSize="16dp"
+            android:textColor="@color/child_floating"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating_login"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="95dp"
+        android:layout_marginRight="@dimen/floating_margin"
+        android:src="@drawable/user"
+        android:elevation="20dp"
+        app:pressedTranslationZ="20dp"
+        android:backgroundTint="@color/child_floating"
+        android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/otp_linear"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="1">
+
+    <TextView
+        android:id="@+id/otp_textview"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="OTP Verification"
+        android:textSize="16dp"
+        android:textColor="@color/child_floating"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:visibility="invisible"/>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating_otp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="160dp"
+        android:layout_marginRight="@dimen/floating_margin"
+        android:src="@drawable/otp"
+        android:elevation="20dp"
+        app:pressedTranslationZ="20dp"
+        android:backgroundTint="@color/child_floating"
+        android:visibility="invisible"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/setting_linear"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/setting_textview"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Settings"
+            android:textSize="16dp"
+            android:textColor="@color/child_floating"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"/>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/setting_floating"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="225dp"
+            android:layout_marginRight="@dimen/floating_margin"
+            android:src="@drawable/settings_icon"
+            android:elevation="20dp"
+            app:pressedTranslationZ="20dp"
+            android:backgroundTint="@color/child_floating"
+            android:visibility="invisible"/>
+
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

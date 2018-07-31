@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="800dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="in.boxinall.client_auto.otp_reg_activity"
+    android:background="@color/child_floating"
+    android:id="@+id/dialog_otp">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:singleLine="true"
+        android:text="----"
+        android:inputType = "number"
+        android:letterSpacing="0.3"
+        android:textColor="@color/green"
+        android:backgroundTint="@color/child_floating"
+        android:textSize="29sp"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/textView5"
+        android:layout_toStartOf="@+id/resend_button"
+        android:layout_marginEnd="10dp" />
+
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:id="@+id/closing_image"
+        android:background="@drawable/closing_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Verfication Step"
+        android:id="@+id/textView4"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/closing_image"
+        android:layout_alignStart="@+id/textView5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Enter the verification code send to the passenger's mobile during booking. "
+        android:id="@+id/textView5"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_marginStart="14dp" />
+
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        style="?android:progressBarStyleHorizontal"
+        android:progress="100"
+        android:progressDrawable="@drawable/progress_shape"
+        android:layout_below="@+id/resend_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="10:00"
+        android:textSize="25sp"
+        android:textColor="#FFFFFf"
+        android:id="@+id/countdown_text"
+        android:layout_alignBottom="@+id/progressbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="59dp" />
+
+    <com.ebanx.swipebtn.SwipeButton
+
+        android:layout_width="250dp"
+        android:id="@+id/swipe"
+        android:layout_height="wrap_content"
+        app:inner_text="SWIPE TO VERIFY"
+        android:layout_marginTop="29dp"
+        app:inner_text_top_padding="20dp"
+        app:inner_text_left_padding="35dp"
+        app:inner_text_bottom_padding="20dp"
+        android:backgroundTintMode="@color/green"
+        app:button_image_enabled="@drawable/right_arrow"
+        app:button_image_disabled="@drawable/right_arrow"
+        app:inner_text_size="15sp"
+        app:button_top_padding="25dp"
+        app:button_bottom_padding="25dp"
+        app:button_left_padding="25dp"
+        app:button_right_padding="25dp"
+        android:layout_below="@+id/progressbar"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Didn't receive the code ?"
+        android:id="@+id/textView6"
+        android:textColor="#FFFFFF"
+        android:layout_alignBaseline="@+id/resend_button"
+        android:layout_alignBottom="@+id/resend_button"
+        android:layout_alignEnd="@+id/countdown_text" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Resend"
+        android:textColor="@color/child_floating"
+        android:background="@drawable/butn_shape"
+        android:padding="6dp"
+        android:id="@+id/resend_button"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/editText"
+        android:layout_toStartOf="@+id/closing_image" />
+
+
+</RelativeLayout>
